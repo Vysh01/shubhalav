@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/themecolor"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="6dp"
+        android:layout_height="match_parent">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                android:layout_height="wrap_content">
+
+
+
+
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="114dp"
+                        android:layout_height="135dp"
+                        android:src="@drawable/s">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Subhalav"
+                        android:id="@+id/textview"
+                        android:textStyle="bold"
+                        android:textColor="@color/themecolor"
+                        android:layout_alignParentRight="true"
+                        android:textSize="30sp"
+                       android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+
+
+
+
+
+
+                <EditText
+                    android:id="@+id/edtphonenumber"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/btnstyle1"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:paddingLeft="15dp" />
+
+                <EditText
+                    android:id="@+id/edtpassword"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textPassword"
+                    android:layout_gravity="center_horizontal"
+                     android:background="@drawable/btnstyle1"
+                    android:hint="Password"
+
+                    />
+
+
+
+                <Button
+                    android:id="@+id/lgn_btn"
+                    android:layout_width="300dp"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/btnstyle1"
+                    android:layout_marginTop="25dp"
+                    android:text="Login"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/themecolor"
+                    >
+
+                </Button>
+
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
