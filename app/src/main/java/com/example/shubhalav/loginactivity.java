@@ -2,6 +2,7 @@ package com.example.shubhalav;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +25,8 @@ public class loginactivity extends AppCompatActivity {
 
     EditText edtphonenumber, edtpassword;
     Button login ;
-    Api userService;
+    SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +46,16 @@ public class loginactivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
 
-    private static String token;
 
-private void userLogin() {
+
+        private void userLogin() {
 
         String mobile_no = edtphonenumber.getText().toString().trim();
         String password = edtpassword.getText().toString().trim();
+         SharedPreferences.Editor editor = sharedPreferences.edit(); 
 
     Call<LoginResponse> call = RetrofitClient.getInstance().getApi().userLogin(mobile_no,password);
 
@@ -66,7 +67,7 @@ private void userLogin() {
             if (!loginResponse.isError()) {
 
                 Toast.makeText(loginactivity.this, loginResponse.getToken(), Toast.LENGTH_SHORT).show();
-                token = loginResponse.getToken(); 
+
             }else {
                 Toast.makeText(loginactivity.this, "error", Toast.LENGTH_SHORT).show();
             }
