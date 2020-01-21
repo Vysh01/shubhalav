@@ -49,6 +49,8 @@ public class loginactivity extends AppCompatActivity {
     }
 
 
+    private static String token;
+
 private void userLogin() {
 
         String mobile_no = edtphonenumber.getText().toString().trim();
@@ -62,9 +64,11 @@ private void userLogin() {
             LoginResponse loginResponse = response.body();
 
             if (!loginResponse.isError()) {
-                
-            }else {
+
                 Toast.makeText(loginactivity.this, loginResponse.getToken(), Toast.LENGTH_SHORT).show();
+                token = loginResponse.getToken(); 
+            }else {
+                Toast.makeText(loginactivity.this, "error", Toast.LENGTH_SHORT).show();
             }
         }
 
