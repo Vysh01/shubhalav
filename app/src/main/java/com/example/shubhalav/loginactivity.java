@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.shubhalav.remote.ApiUtilis;
 import com.example.shubhalav.remote.UserService;
 
 public class loginactivity extends AppCompatActivity {
@@ -35,11 +34,10 @@ public class loginactivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String phone_no = edtphonenumber.getText().toString();
-                String password = edtpassword.getText().toString();
 
 
-                if (validateLogin(phone_no,password))
+
+
             }
         });
 
@@ -47,9 +45,6 @@ public class loginactivity extends AppCompatActivity {
     }
 
 
-    private boolean validateLogin(String phone_no, String password) {
-        if()
-    }
 
 
 }
