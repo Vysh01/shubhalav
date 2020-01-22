@@ -60,7 +60,7 @@
 
 
                 <EditText
-                    android:id="@+id/edtphonenumber"
+                    android:id="@+id/ID_phone_number"
                     android:layout_width="300dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="5dp"
@@ -73,7 +73,7 @@
                     android:paddingLeft="15dp" />
 
                 <EditText
-                    android:id="@+id/edtpassword"
+                    android:id="@+id/ID_password"
                     android:layout_width="300dp"
                     android:layout_height="60dp"
                     android:paddingLeft="15dp"
@@ -83,7 +83,10 @@
                     android:inputType="textPassword"
                     android:layout_gravity="center_horizontal"
                      android:background="@drawable/btnstyle1"
-                    android:hint="Password" ></EditText>
+                    android:hint="Password" >
+
+
+                </EditText>
 
 
 

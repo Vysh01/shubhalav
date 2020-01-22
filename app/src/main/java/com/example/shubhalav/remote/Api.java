@@ -1,6 +1,9 @@
 package com.example.shubhalav.remote;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.shubhalav.model.LoginResponse;
+import com.example.shubhalav.model.Shop_details;
 import com.example.shubhalav.model.User;
 
 import okhttp3.RequestBody;
@@ -16,12 +19,9 @@ public interface Api {
 
 
 
-    @POST("login")
-    Call<LoginResponse> userLogin(
-            @Field("mobile_no") String mobile_no,
-            @Field("password") String password);
+    @POST("login/")
+    Call<LoginResponse> login(@Body RequestBody body);
 
-
-
-//    Call<TokenModel> login(@Body RequestBody body);
+    @GET("shop/")
+    Call<Shop_details> Shopdetails();
 }

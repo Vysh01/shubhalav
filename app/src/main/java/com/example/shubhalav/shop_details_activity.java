@@ -24,9 +24,8 @@ public class shop_details_activity extends AppCompatActivity {
     private static final int PERMISSION_CODE =1000 ;
     private static final int IMAGE_CAPTURE_CODE =1001 ;
     Button mCapturebtn;
-    ImageView mImageview1, mImageview2 ;
+    ImageView mImageview1 ;
     Button savebutton ;
-//    Button yes_button, no_button
     Uri image_uri ;
 
     @Override
