@@ -29,7 +29,6 @@
 
         </activity>
         <activity android:name=".ShopListActivity"></activity>
-        <activity android:name=".summarylayout_activity"></activity>
     </application>
 
 </manifest>
