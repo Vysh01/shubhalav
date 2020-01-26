@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -18,9 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.shubhalav.model.LoginResponse;
 import com.example.shubhalav.remote.RetrofitClient;
 
-import java.io.File;
 
-import okhttp3.MediaType;
+
+
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -44,7 +44,7 @@ public class ActivityLogin extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         dialog.setIndeterminate(true);
         dialog.setCancelable(false);
-        dialog.setMessage("Loading Please wait...");
+        dialog.setMessage("Logging in");
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,11 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
-                Log.d("mylog", "Got Resp");
+                Log.d("mylog", "Got Resp:" + response.toString());
+                if (loginResponse == null) {
+                    Toast.makeText(ActivityLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (!loginResponse.isError()) {
                     Intent intent = new Intent(ActivityLogin.this, ShopListActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -92,10 +96,11 @@ public class ActivityLogin extends AppCompatActivity {
                     SharedPreferences sp = getSharedPreferences(Constants.SP_NAME, MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
                     editor.putString(Constants.spToken, loginResponse.getToken());
+                    editor.putInt(Constants.userId, loginResponse.getUser().getId());
                     editor.commit();
                     Toast.makeText(ActivityLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(ActivityLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityLogin.this, "Login Failed, Username or Password incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -20,6 +20,11 @@ public class LoginResponse {
     public String getToken() {
         return token;
     }
+
+
+    public User getUser() {
+        return user.get(0);
+    }
 }
 
 

@@ -3,14 +3,16 @@ package com.example.shubhalav.model;
 public class ShopModel {
 
     private boolean error;
-    private String shop_id;
-    private String shop_name;
+    private String outlet_name;
+    private String tme_code;
+    private String status;
+    private String contact_person;
+    private String contact_number;
     private String shop_address;
-    private String shop_lat;
-    private String shop_long;
-    private String user_lat;
-    private String user_long;
-
+    private String longitude;
+    private String latitude;
+     private  String birthday_date;
+     private String remarks;
 
     public boolean isError() {
         return error;
@@ -20,20 +22,44 @@ public class ShopModel {
         this.error = error;
     }
 
-    public String getShop_id() {
-        return shop_id;
+    public String getOutlet_name() {
+        return outlet_name;
     }
 
-    public void setShop_id(String shop_id) {
-        this.shop_id = shop_id;
+    public void setOutlet_name(String outlet_name) {
+        this.outlet_name = outlet_name;
     }
 
-    public String getShop_name() {
-        return shop_name;
+    public String getTme_code() {
+        return tme_code;
     }
 
-    public void setShop_name(String shop_name) {
-        this.shop_name = shop_name;
+    public void setTme_code(String tme_code) {
+        this.tme_code = tme_code;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getContact_person() {
+        return contact_person;
+    }
+
+    public void setContact_person(String contact_person) {
+        this.contact_person = contact_person;
+    }
+
+    public String getContact_number() {
+        return contact_number;
+    }
+
+    public void setContact_number(String contact_number) {
+        this.contact_number = contact_number;
     }
 
     public String getShop_address() {
@@ -44,35 +70,35 @@ public class ShopModel {
         this.shop_address = shop_address;
     }
 
-    public String getShop_lat() {
-        return shop_lat;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public void setShop_lat(String shop_lat) {
-        this.shop_lat = shop_lat;
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 
-    public String getShop_long() {
-        return shop_long;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setShop_long(String shop_long) {
-        this.shop_long = shop_long;
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
-    public String getUser_lat() {
-        return user_lat;
+    public String getBirthday_date() {
+        return birthday_date;
     }
 
-    public void setUser_lat(String user_lat) {
-        this.user_lat = user_lat;
+    public void setBirthday_date(String birthday_date) {
+        this.birthday_date = birthday_date;
     }
 
-    public String getUser_long() {
-        return user_long;
+    public String getRemarks() {
+        return remarks;
     }
 
-    public void setUser_long(String user_long) {
-        this.user_long = user_long;
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
     }
 }

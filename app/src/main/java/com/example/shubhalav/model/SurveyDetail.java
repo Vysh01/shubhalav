@@ -4,20 +4,22 @@ import android.graphics.Bitmap;
 
 public class SurveyDetail {
 
-    private String shop_id;
+    private String tme_code_id;
     private String user_id;
     private String ctd_box;
     private String clean_ctd;
     private String visibiity;
-    private Bitmap image1;
+    private Bitmap image;
     private Bitmap image2;
+    private String verification;
+    private  String status ;
 
-    public String getShop_id() {
-        return shop_id;
+    public String getTme_code_id() {
+        return tme_code_id;
     }
 
-    public void setShop_id(String shop_id) {
-        this.shop_id = shop_id;
+    public void setTme_code_id(String tme_code_id) {
+        this.tme_code_id = tme_code_id;
     }
 
     public String getUser_id() {
@@ -52,12 +54,12 @@ public class SurveyDetail {
         this.visibiity = visibiity;
     }
 
-    public Bitmap getImage1() {
-        return image1;
+    public Bitmap getImage() {
+        return image;
     }
 
-    public void setImage1(Bitmap image1) {
-        this.image1 = image1;
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 
     public Bitmap getImage2() {
@@ -66,5 +68,21 @@ public class SurveyDetail {
 
     public void setImage2(Bitmap image2) {
         this.image2 = image2;
+    }
+
+    public String getVerification() {
+        return verification;
+    }
+
+    public void setVerification(String verification) {
+        this.verification = verification;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

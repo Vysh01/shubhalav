@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class item_list_activity extends AppCompatActivity {
+public class itemListActivity extends AppCompatActivity {
 
 
     TextView no, title , body;
@@ -26,7 +26,7 @@ public class item_list_activity extends AppCompatActivity {
         title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(item_list_activity.this, ShopDetailsActivity.class);
+                Intent intent = new Intent(itemListActivity.this, ShopDetailsActivity.class);
                 startActivity(intent);
             }
         });

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,7 +15,7 @@ import com.example.shubhalav.remote.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -45,6 +46,8 @@ public class ShopListActivity extends AppCompatActivity {
             public void onResponse(Call<ArrayList<ShopModel>> call, Response<ArrayList<ShopModel>> response) {
                 ArrayList shopList = response.body();
                 recyclerView.setAdapter(new ShopListAdapter(shopList));
+
+
             }
 
             @Override

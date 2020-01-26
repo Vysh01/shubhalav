@@ -5,6 +5,8 @@ public class User {
     private int id ;
     private String mobile_no, first_name, last_name,email,password, address ;
 
+
+
     public int getId() {
         return id;
     }

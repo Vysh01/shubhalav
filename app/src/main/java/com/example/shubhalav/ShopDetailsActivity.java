@@ -49,6 +49,7 @@ public class ShopDetailsActivity extends AppCompatActivity {
     String visibility;
     Boolean ctdBox;
     Boolean cleanCTD;
+    
 
 
     @Override

@@ -12,15 +12,17 @@ import com.example.shubhalav.R;
 import com.example.shubhalav.model.ShopModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ShopListAdapter extends RecyclerView.Adapter<ShopListAdapter.ProgrammingViewHolder> {
 
     private ArrayList<ShopModel> shopModelList;
 
     public ShopListAdapter(ArrayList<ShopModel> shopModelList) {
+
         this.shopModelList = shopModelList;
     }
+
+
 
     @NonNull
     @Override
@@ -33,8 +35,8 @@ public class ShopListAdapter extends RecyclerView.Adapter<ShopListAdapter.Progra
     @Override
     public void onBindViewHolder(@NonNull ProgrammingViewHolder holder, int position) {
 
-        String no = shopModelList.get(position).getShop_id();
-        String title = shopModelList.get(position).getShop_name();
+        String no = shopModelList.get(position).getTme_code();
+        String title = shopModelList.get(position).getOutlet_name();
         String body = shopModelList.get(position).getShop_address();
         holder.no.setText(no);
         holder.title.setText(title);
@@ -45,6 +47,7 @@ public class ShopListAdapter extends RecyclerView.Adapter<ShopListAdapter.Progra
     public int getItemCount() {
         return shopModelList.size();
     }
+
 
     public class ProgrammingViewHolder extends RecyclerView.ViewHolder {
         TextView no;
