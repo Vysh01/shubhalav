@@ -1,376 +1,467 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:gravity="center"
-    android:background="@color/themecolor"
-    android:layout_height="match_parent">
-
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@color/background_login"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:src="@drawable/s"
-                android:layout_marginTop="10dp"
-                android:layout_height="50dp"></ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Subhalav"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_height="wrap_content">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.Toolbar>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="30dp"
-        app:cardCornerRadius="6dp"
-        android:background="@color/white"
-        android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/suu">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
 
+        <EditText
+            android:id="@+id/shop_number"
+            android:layout_width="360dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btnstyle1"
+            android:drawableEnd="@drawable/ic_add_circle_outline_black_24dp"
+            android:drawableRight="@drawable/ic_add_circle_outline_black_24dp"
+            android:hint="Shop Number"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:textColor="@color/blue" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/shop_name"
+            android:layout_width="360dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btnstyle1"
+            android:drawableEnd="@drawable/ic_add_circle_outline_black_24dp"
+            android:drawableRight="@drawable/ic_add_circle_outline_black_24dp"
+            android:hint="Shop Name"
+            android:paddingLeft="15dp"
+            android:textColor="@color/blue" />
+
+        <EditText
+            android:id="@+id/shopaddress"
+            android:layout_width="360dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btnstyle1"
+            android:drawableEnd="@drawable/ic_add_circle_outline_black_24dp"
+            android:drawableRight="@drawable/ic_add_circle_outline_black_24dp"
+            android:hint="Address"
+            android:paddingLeft="15dp"
+            android:textColor="@color/blue" />
 
 
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            app:cardCornerRadius="6dp">
 
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:text="CTD Box"
-                   android:textStyle="bold"
-                   android:textSize="30sp"
-                   android:layout_margin="5dp"
-                   android:layout_centerInParent="true"
-                   android:textColor="@color/themecolor"
-                   android:layout_height="wrap_content">
-
-               </TextView>
-           </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_margin="20dp"
-                android:layout_height="75dp">
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="CTD Box"
+                        android:textColor="@color/blue"
+                        android:textSize="20dp">
+
+                    </TextView>
+                </RelativeLayout>
+
 
                 <Button
-                    android:id="@+id/yes_btn"
-                    android:layout_width="300dp"
-                    android:layout_height="65dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/btnstyle1"
-                    android:layout_marginTop="1dp"
-                    android:text="YES"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:textColor="@color/themecolor"
-                    >
-
-                </Button>
-
-                <Button
-                    android:id="@+id/no_btn"
-                    android:layout_width="300dp"
+                    android:id="@+id/yes_btn1"
+                    android:layout_width="40dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/btnstyle1"
                     android:layout_marginTop="1dp"
-                    android:text="NO"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:textColor="@color/themecolor"
-                    >
+                    android:background="@drawable/yes_no_"
+                    android:text="YES"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp">
 
                 </Button>
 
-
-
-
+                <Button
+                    android:id="@+id/no_btn1"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/yes_no_"
+                    android:text="NO"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"></Button>
 
 
             </LinearLayout>
 
-        </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="30dp"
-        app:cardCornerRadius="6dp"
-        android:background="@color/white"
-        android:layout_height="wrap_content">
+        </androidx.cardview.widget.CardView>
 
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            app:cardCornerRadius="6dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Clean CTD"
-                    android:textStyle="bold"
-                    android:textSize="30sp"
-                    android:layout_margin="5dp"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/themecolor"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-            </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_margin="20dp"
-                android:layout_height="70dp">
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:text=" Clean CTD"
+                        android:textColor="@color/blue"
+                        android:textSize="20dp">
+
+                    </TextView>
+                </RelativeLayout>
+
 
                 <Button
-                    android:id="@+id/yes_btn1"
-                    android:layout_width="300dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/yes_btn2"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/btnstyle1"
                     android:layout_marginTop="1dp"
-                    android:text="YES"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:textColor="@color/themecolor"
-                    >
+                    android:background="@drawable/yes_no_"
+                    android:text="YES"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp">
 
                 </Button>
 
                 <Button
                     android:id="@+id/no_btn2"
-                    android:layout_width="300dp"
-                    android:layout_height="65dp"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/btnstyle1"
                     android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/yes_no_"
                     android:text="NO"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:textColor="@color/themecolor"
-                    >
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"></Button>
 
-                </Button>
 
             </LinearLayout>
 
-        </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="30dp"
-        app:cardCornerRadius="6dp"
-        android:background="@color/white"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+        </androidx.cardview.widget.CardView>
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Visibility"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:layout_margin="5dp"
-                android:layout_centerInParent="true"
-                android:textColor="@color/themecolor"
-                android:layout_height="wrap_content">
-
-            </TextView>
-        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"
+            app:cardCornerRadius="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="70dp">
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:text="Poster"
-                    android:textColor="@color/themecolor"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_weight="1"
-                    android:layout_height="40dp">
-
-                </CheckBox>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:text="Price Tag"
-                    android:textColor="@color/themecolor"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_weight="1"
-                    android:layout_height="40dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                </CheckBox>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Visibility"
+                        android:textColor="@color/blue"
+                        android:textSize="20dp">
+
+                    </TextView>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/c1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="Poster"
+                            android:textColor="@color/blue"
+                            android:textSize="18sp">
+
+                        </CheckBox>
+
+                        <CheckBox
+                            android:id="@+id/c2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="Price Tag"
+                            android:textColor="@color/blue"
+                            android:textSize="18sp">
+
+                        </CheckBox>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+
+                            <CheckBox
+                                android:id="@+id/c3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="Both"
+                                android:textColor="@color/blue"
+                                android:textSize="18sp">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/c4"
+                                android:layout_below="@+id/c3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="None"
+                                android:textColor="@color/blue"
+                                android:textSize="18sp">
+
+                            </CheckBox>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                android:layout_marginTop="5dp"-->
+                <!--                android:layout_height="70dp">-->
+                <!--                <CheckBox-->
+                <!--                    android:id="@+id/c1"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:text="Poster"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    android:checked="false"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:layout_height="40dp">-->
+
+                <!--                </CheckBox>-->
+
+
+                <!--                <CheckBox-->
+                <!--                    android:id="@+id/c2"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:text="Price Tag"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:checked="false"-->
+                <!--                    android:layout_height="40dp">-->
+
+                <!--                </CheckBox>-->
+                <!--            </LinearLayout>-->
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                android:layout_height="70dp">-->
+                <!--                <CheckBox-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:text="Both"-->
+                <!--                    android:id="@+id/c3"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    android:checked="false"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:layout_height="40dp">-->
+
+                <!--                </CheckBox>-->
+
+
+                <!--                <CheckBox-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:text="None"-->
+                <!--                    android:id="@+id/c4"-->
+                <!--                    android:checked="false"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    android:textSize="18sp">-->
+
+                <!--                </CheckBox>-->
+                <!--            </LinearLayout>-->
+
+
             </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="6dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="70dp">
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:text="Both"
-                    android:textColor="@color/themecolor"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp">
+                    android:src="@drawable/cd"></ImageView>
 
-                </CheckBox>
-
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:text="None"
-                    android:textColor="@color/themecolor"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp">
+                    android:src="@drawable/cd"></ImageView>
 
-                </CheckBox>
+
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="360dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_background"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            >
+
+        </Button>
 
 
-
-    </androidx.cardview.widget.CardView>
-
-
-
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:orientation="horizontal"
-       android:layout_height="wrap_content">
-
-       <ImageView
-           android:layout_width="200dp"
-           android:id="@+id/img_1"
-           android:layout_weight="1"
-           android:src="@drawable/a_p"
-           android:layout_marginLeft="5dp"
-           android:layout_height="200dp"></ImageView>
-
-       <ImageView
-           android:layout_width="200dp"
-           android:id="@+id/img_2"
-           android:layout_weight="1"
-           android:src="@drawable/a_p"
-           android:layout_marginRight="5dp"
-           android:layout_height="200dp"></ImageView>
-
-
-
-   </LinearLayout>
-
-
-
-    <Button
-        android:id="@+id/addphoto_btn"
-        android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/btnstyle1"
-        android:layout_marginTop="25dp"
-        android:text="ADD PHOTO"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/themecolor"
-        >
-
-    </Button>
-
-
-    <Button
-        android:id="@+id/save_btn"
-        android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/btnstyle1"
-        android:layout_marginTop="25dp"
-        android:text="SAVE"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/themecolor"
-        >
-
-    </Button>
-
-
-
-
-</LinearLayout>
+    </LinearLayout>
 
 </ScrollView>

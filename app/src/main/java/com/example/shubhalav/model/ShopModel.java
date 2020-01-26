@@ -1,7 +1,6 @@
 package com.example.shubhalav.model;
 
-public class Shop_details {
-
+public class ShopModel {
 
     private boolean error;
     private String shop_id;

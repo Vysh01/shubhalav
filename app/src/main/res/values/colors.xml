@@ -2,9 +2,14 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
+    <color name="yesColor">#008550</color>
+    <color name="noColor">#D10000</color>
     <color name="Grey">#545750</color>
     <color name="colorAccent">#D81B60</color>
     <color name="themecolor">#427FE9</color>
     <color name="textcolor">#081</color>
-    <color name="white">#F0F3F5</color>
+    <color name="white">#fff</color>
+    <color name="background_login">#14243024</color>
+    <color name="blue">#1A2C4F</color>
+
 </resources>

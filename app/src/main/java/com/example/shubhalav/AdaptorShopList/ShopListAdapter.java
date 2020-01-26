@@ -9,65 +9,53 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shubhalav.R;
+import com.example.shubhalav.model.ShopModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class itemAdaptor extends RecyclerView.Adapter<itemAdaptor.ProgrammingViewHolder> {
+public class ShopListAdapter extends RecyclerView.Adapter<ShopListAdapter.ProgrammingViewHolder> {
 
-private List<modelclass> modelclassList;
+    private ArrayList<ShopModel> shopModelList;
 
-    public itemAdaptor(List<modelclass> modelclassList) {
-
-        this.modelclassList = modelclassList;
+    public ShopListAdapter(ArrayList<ShopModel> shopModelList) {
+        this.shopModelList = shopModelList;
     }
 
     @NonNull
     @Override
     public ProgrammingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.item_list_layout, parent,false);
+        View view = inflater.inflate(R.layout.item_list_layout, parent, false);
         return new ProgrammingViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProgrammingViewHolder holder, int position) {
 
-        String no = modelclassList.get(position).getNo();
-        String title = modelclassList.get(position).getTitle();
-        String body = modelclassList.get(position).getBody();
-        holder.setData(no, title, body);
-
-
-
+        String no = shopModelList.get(position).getShop_id();
+        String title = shopModelList.get(position).getShop_name();
+        String body = shopModelList.get(position).getShop_address();
+        holder.no.setText(no);
+        holder.title.setText(title);
+        holder.body.setText(body);
     }
 
     @Override
     public int getItemCount() {
-        return modelclassList.size();
+        return shopModelList.size();
     }
 
-    public class ProgrammingViewHolder extends RecyclerView.ViewHolder  {
+    public class ProgrammingViewHolder extends RecyclerView.ViewHolder {
+        TextView no;
+        TextView title;
+        TextView body;
 
-          TextView no;
-          TextView title;
-          TextView body ;
         public ProgrammingViewHolder(@NonNull View itemView) {
             super(itemView);
-
-
-
             no = itemView.findViewById(R.id.no);
             title = itemView.findViewById(R.id.title);
             body = itemView.findViewById(R.id.body);
-
-
-
-
-        }
-        private void setData(String noText, String titleText, String bodyText) {
-            no.setText(noText);
-            title.setText(titleText);
-            body.setText(bodyText);
         }
 
     }
